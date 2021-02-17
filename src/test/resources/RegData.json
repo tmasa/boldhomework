@@ -1,0 +1,23 @@
+{
+  "personalInformation": {
+    "title": "MR",
+    "firstName": "Home",
+    "lastName": "Work",
+    "email": "random@random.com",
+    "password": "hello",
+    "partnerOfferRequested": true,
+    "newsletterRequested": false,
+    "dayOfBirth": 3,
+    "monthOfBirth": 6,
+    "yearOfBirth": 1985
+  },
+  "addressInformation": {
+    "firstName": "Home",
+    "lastName": "Work",
+    "addressLine1": "MyAddress",
+    "city": "Denver",
+    "state": "COLORADO",
+    "zip": "80014",
+    "mobilePhone": "3035559066"
+  }
+}
