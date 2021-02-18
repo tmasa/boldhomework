@@ -2,7 +2,6 @@ package testcases;
 
 import dataproviders.ErrorMessageProvider;
 import dataproviders.RegistrationInformationJsonProvider;
-import dataproviders.ListOfElements;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -55,9 +54,7 @@ public class AutomationInPracticeTests {
     }
 
     @Test(dataProviderClass = ErrorMessageProvider.class, dataProvider = "mandatoryErrors")
-    public void testMandatoryFields(ListOfElements listOfErrors) {
-
-        List<String> expectedErrors = listOfErrors.getListOfStrings();
+    public void testMandatoryFields(List<String> listOfErrors) {
 
         List<String> errorMessages = new HomePage(driver)
                 .clickOnSignInLink()
@@ -66,7 +63,7 @@ public class AutomationInPracticeTests {
                 .clickOnRegisterButtonWithError()
                 .getErrors();
 
-        Assert.assertEquals(expectedErrors, errorMessages);
+        Assert.assertEquals(listOfErrors, errorMessages);
     }
 
     @Test()
